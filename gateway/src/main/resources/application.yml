@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: clientModule
+          uri: lb://CLIENT
+          predicates:
+            - Path=/api/client/**
+        - id: departmentModule
+          uri: lb://DEPARTMENT
+          predicates:
+            - Path=/api/department/**
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true

@@ -14,7 +14,10 @@ spring:
     init:
       mode: always
   application:
-    name: client
+    name: CLIENT
+  mvc:
+    servlet:
+      path: /api/client
 eureka:
   client:
     register-with-eureka: true

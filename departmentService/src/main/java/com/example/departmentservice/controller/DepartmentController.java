@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/department")
 @RequiredArgsConstructor
 public class DepartmentController {
     private final DepartmentService departmentService;
